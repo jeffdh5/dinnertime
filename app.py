@@ -35,7 +35,7 @@ def index():
 			picture = photo_enlarge(random_choice["image_url"])
 			latitude = random_choice["location"]["coordinate"]["latitude"]
 			longitude = random_choice["location"]["coordinate"]["longitude"]
-    		return render_template('page2.html', name=name, address=address, picture=picture, latitutde=latitude, longitude=longitude)
+    		return render_template('page2.html', name=name, address=address, picture=picture, latitude=latitude, longitude=longitude)
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.

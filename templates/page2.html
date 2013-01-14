@@ -3,63 +3,46 @@
 		<link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="../static/static.css" type="text/css" /> 
 		<title>Eat Here!</title> 
-		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-    	<script>
-			{% with objects = get_flashed_messages() %}
+    	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    	<style type="text/css">
+      		#map_canvas { 
+      		width: 365px;
+      		height: 250px;
+      		}
+    	</style>
+	    <script type="text/javascript"
+    	  	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAKQl6A_LiqvYN_f78-oqfaRURGuvhOj0&sensor=true">
+    	</script>
+    	<script type="text/javascript">
       		function initialize() {
         		var mapOptions = {
-          			scaleControl: true,
-          			center: new google.maps.LatLng({{ latitude }}, {{ longitude }}),
-          	{% endwith %}
-          			zoom: 17,
-          			mapTypeId: google.maps.MapTypeId.ROADMAP
+          		center: new google.maps.LatLng({{latitude }},{{ longitude }}),
+          		zoom: 15,
+          		mapTypeId: google.maps.MapTypeId.ROADMAP
         		};
-				
-				var map = new google.maps.Map(document.getElementById('map_canvas'),
-            		mapOptions);
- 	
-        		var marker = new google.maps.Marker({
-          			map: map,
-          			position: map.getCenter()
-        		});
-        		var infowindow = new google.maps.InfoWindow();
-        		infowindow.setContent('<b>' + {{ location }} + '</b>');
-       			google.maps.event.addListener(marker, 'click', function() {
-            		infowindow.open(map, marker);
-        		});
-     		}
- 
-      			google.maps.event.addDomListener(window, 'load', initialize);
-    	</script>
-    		
-  		<script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
-  		<script type="text/javascript" src="js/custom.js"></script>
-  		<script>
-   		$(function() {
-    		$("#refresh").click(function() {
-         		$("#body").load("page2.html")
-      		})
-    	})
-		</script>
+        		var map = new google.maps.Map(document.getElementById("map_canvas"),
+            	mapOptions);
+      			}
+   		</script>
     	</head>
-    <body>	
-		<div id=header> 
-		</div>
-	
-		<div id=top> 
+    <body onload="initialize()">	
+		<div id="page2_body">
+			<div id="top"> 
 				<h1> HOMIE, YOU WANNA TRY...<br><b>{{ name }}</b></h1>
 				<h2><b>{{ address }}</b></h2>
-
-		</div>
-		<div id=middle>
-		<div id=middle_left>
-			<h2> <div id="map_canvas" style="width: 365px; height: 250px;"></div> </h2>
-		</div>
-		<div id=middle_right>
-			<h2><img src= {{ picture }} alt="some_text" width="365" height="250"></h2>
-		</div>
-		<div id=bottom>
-			<h3><a id="refresh" href="javascript:history.go(0)">START OVER?</a></h3>
+			</div>
+			<div id=middle>
+				<div id="middle_left">
+					<br>
+		    		<div id="map_canvas"></div>
+				</div>
+				<div id="middle_right">
+					<h2><img src= {{ picture }} alt="some_text" width="365px" height="250px"></h2>
+				</div>
+			</div>
+			<div id=bottom>
+				<h3><a id="refresh" href="javascript:history.go(0)">START OVER?</a></h3>
+			</div>
 		</div>
 	</body>
 </html>

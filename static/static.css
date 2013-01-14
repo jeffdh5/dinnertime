@@ -1,12 +1,12 @@
 	h1{
 	font-family: 'Raleway';
-	font-size:3.0em; 
+	font-size:2.5em; 
 	font-weight:100;
 	}
 	
 	h2{
 	font-family: 'Raleway';
-	font-size:1.8em;
+	font-size:1.4em;
 	font-weight:1000;
 	}
 	
@@ -21,32 +21,13 @@
 	line-height:140%;
 	}
 	
+/* ---------------------INDEX STYLES -----------------------*/
 	#fullbody {
 	height: 650px;
 	width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-	}
-	
-	#body_left {
-	position:relative
-	height: 650px;
-	width: 600px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	float:left
-	}
-	
-	#body_right {
-	position:relative
-	height: 650px;
-	width: 600px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	float:right
 	}
 	
 	#body_bottom {
@@ -58,50 +39,6 @@
 	margin-right: auto;
 	text-align: center;
 	}
-	
-		#top {
-	height: 200px;
-	width: 850px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	}
-	#middle {
-	height: 300px;
-	width: 750px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	float: center;
-	}
-	
-	#middle_left {
-	height: 300px;
-	width: 375px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	float: left;
-	}
-	
-	#middle_right {
-	height: 300px;
-	width: 375px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	float: right;
-	}
-	
-	#bottom {
-	height: 100px;
-	width: 750px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	}
-
-	
 	#search input[type="text"] {
     border: 1px solid #d1d1d1;
     font: bold 40px Raleway;
@@ -151,4 +88,56 @@
 	.button:active {
 	position: relative;
 	top: 1px;
+	}
+/* ---------------------PAGE2 STYLES -----------------------*/
+
+	#page2_body{
+	width: 750px;
+	height: 1050px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;	
+	}
+	
+	#top {
+	width: 750px;
+	height: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	}
+	
+
+	
+	#middle {
+	width: 750px;
+	height: 250px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	float: center;
+	}
+	
+	#middle_left {
+	width: 375px;
+	height: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	float: left;
+	}
+	
+	#middle_right {
+	width: 375px;
+	height: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	float: right;
+	}
+	
+	#bottom {
+	width: 750px;
+	height: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 	}
