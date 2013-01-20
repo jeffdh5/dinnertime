@@ -29,14 +29,18 @@ def index():
 			term = request.form['term']
 			results = Search(url_params={'term':term, 'location':location})
 			businesses = results["businesses"]
-			random_choice = choice(businesses)
-			name = random_choice["name"]
-			address = (address_return(random_choice["location"]["display_address"]))
-			picture = photo_enlarge(random_choice["image_url"])
-			latitude = random_choice["location"]["coordinate"]["latitude"]
-			longitude = random_choice["location"]["coordinate"]["longitude"]
-    		return render_template('page2.html', name=name, address=address, picture=picture, latitude=latitude, longitude=longitude)
+			if businesses == []:
+				return render_template('index.html', error='Well shoot. Our system could not find anything with those search terms. Try again?')
+			else:
+				random_choice = choice(businesses)
+				name = random_choice["name"]
+				address = (address_return(random_choice["location"]["display_address"]))
+				picture = photo_enlarge(random_choice["image_url"])
+				latitude = random_choice["location"]["coordinate"]["latitude"]
+				longitude = random_choice["location"]["coordinate"]["longitude"]
+    			return render_template('page2.html', name=name, address=address, picture=picture, latitude=latitude, longitude=longitude)
 
+    			
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
     port = int(os.environ.get('PORT', 5000))

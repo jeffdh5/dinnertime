@@ -1,13 +1,18 @@
+	body {
+	width: 62.5%;
+	height:50%;
+	}
+
 	h1{
 	font-family: 'Raleway';
-	font-size:2.5em; 
+	font-size:3em; 
 	font-weight:100;
 	}
-	
+
 	h2{
 	font-family: 'Raleway';
-	font-size:1.4em;
-	font-weight:1000;
+	font-size:1.8em;
+	font-weight:100;
 	}
 	
 	h3{
@@ -22,6 +27,8 @@
 	}
 	
 /* ---------------------INDEX STYLES -----------------------*/
+	#
+
 	#fullbody {
 	height: 650px;
 	width: 1200px;
