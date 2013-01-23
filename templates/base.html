@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  	<script type="text/javascript" src="../static/jquery-1.8.3.min.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="../static/reset.css" type="text/css" /> 
+		<link rel="stylesheet" href="../static/static.css" type="text/css" /> 
+		<script type="text/javascript">
+			$(document).ready(function() {
+    			$("body").css("display", "none");
+ 
+    			$("body").fadeIn(2000);
+ 
+    			$("a.transition").click(function(event){
+       				event.preventDefault();
+        			linkLocation = this.href;
+        			$("body").fadeOut(1000, redirectPage);      
+				});
+         
+				function redirectPage() {
+        			window.location = linkLocation;
+    			}
+			});
+		</script>
+
+		<title>DinnerTime, Beta!</title>
+	</head>
+	<body>
+	<div id="header">
+		<div id="header_content_area">
+			<div id="logo">
+				<div id="logo_l1">
+					DinnerTime
+				</div>
+				<div id="logo_l2">
+					Beta!
+				</div>
+			</div>
+			<div id="header_nav">
+				<ul>
+					<li><a href="{{ url_for('index') }}" class="transition">Home</a></li>
+					<li> | </li>
+					<li><a href="{{ url_for('about') }}" class="transition">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="horizontal_spacer"></div>
+
+	{% block content %} {% endblock %}
+
+	<div class="horizontal_spacer"></div>
+	<div id="footer">
+		<div id="footer_content">
+			Hey there, beautiful. My name's Jeff Huang. Berkeley CS '16.
+		</div>
+	</div>	
+	</body>
+
+</html>

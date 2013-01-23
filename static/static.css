@@ -1,54 +1,143 @@
-	body {
-	width: 62.5%;
-	height:50%;
-	}
+/* =============================== GENERAL STYLES ====================================*/
 
-	h1{
-	font-family: 'Raleway';
-	font-size:3em; 
-	font-weight:100;
-	}
+body{
+	font-family: 'helvetica neue', helvetica;
+	line-height: 20px;
+	width:100%;
+	height:100%;
+}
 
-	h2{
+.heading_spacer{
+	height: 25px;
+}
+
+h1{
+	font-size:50px;
 	font-family: 'Raleway';
-	font-size:1.8em;
-	font-weight:100;
-	}
-	
-	h3{
+	line-height: 100%;
+	font-weight: 100;
+}
+
+h2{
+	font-size:20px;
+	font-weight: 100;
 	font-family: 'Raleway';
-	font-size:1em;
-	font-weight:1000;
-	}	
+	line-height: 20px;
+	color: #333333;
+}
+
+h3{
+	font-size:40px;
+	font-weight: 100;
+	font-family: 'Raleway';
+	line-height: 20px;
+	color: #333333;
+}
+
+h4{
+	font-size:20px;
+	font-weight: 100;
+	font-family: 'Raleway';
+	line-height: 20px;
+	color: #333333;
+}
+
+.horizontal_spacer{
+	height:25px;
+}
+
+.colored_container{
+	background-color: blue;
+}
+
+a.specialeffects:hover {
+  text-decoration: underline;
+}
+
 	
-	p {
-	font-size:.9em; 
-	line-height:140%;
-	}
-	
+/* --------------------HEADER STYLES -----------------------*/
+
+#header{
+	height: 85px;
+	border-top: 10px solid #B7D7D5;
+	border-bottom: 1px dotted #CCC;
+
+}
+
+#header_content_area{
+	width: 800px; 
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#logo{
+	float: left;
+	font-family: Raleway;
+	border-top: 3px solid green;
+	padding-top: 10px;
+	padding-left:5px;
+	padding-right:10px;
+	margin-top:8px;
+}
+
+#logo_l1{
+	font-size: 20px;
+	padding-bottom: 7px;
+}
+
+#logo_l2{
+	text-align:center;
+	font-size: 28px;
+}
+
+#header_nav {
+	font-family: Raleway;
+	margin-top: 55px;
+	float:right;
+}
+
+#header_nav li{
+	display:inline;
+	padding-left: 7px;
+}
+
+#header_nav a {
+	text-decoration: none;
+	font-size: 15px;
+	color: #000000;
+}
+
+
+#header_nav a:hover {
+	text-decoration: underline;
+}
+
+/* ===================================  FOOTER =============================== */
+
+#footer {
+	position:absolute;
+	height: 30px;
+	width:100%;
+	bottom:0;
+	border-bottom: 10px solid #B7D7D5;
+	border-top: 1px dotted #CCC;
+
+}
+
+#footer_content{
+	color: #CCCCCC;
+	font-size: 14px;
+	width:800px;
+	padding: 4px 0px 0px 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 /* ---------------------INDEX STYLES -----------------------*/
-	#
 
-	#fullbody {
-	height: 650px;
-	width: 1200px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	}
-	
-	#body_bottom {
-	position:absolute
-	bottom:0
-	height: 400px;
-	width: 600px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	}
 	#search input[type="text"] {
     border: 1px solid #d1d1d1;
-    font: bold 40px Raleway;
+    font:  30px Raleway;
     color: #bebebe;
     width: 350px;
     padding: 6px 15px 6px 35px;
@@ -76,8 +165,7 @@
 	cursor: pointer;
 	text-align: center;
 	text-decoration: none;
-	color: #bebebe;
-	font: bold 40px Raleway;
+	font: 30px Raleway;
 	padding: 0.1em 3.5em .15em;
     text-shadow: 0 5px 3px rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
@@ -99,8 +187,8 @@
 /* ---------------------PAGE2 STYLES -----------------------*/
 
 	#page2_body{
-	width: 750px;
-	height: 1050px;
+	width: 100%;
+	height: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;	
@@ -108,14 +196,12 @@
 	
 	#top {
 	width: 750px;
-	height: 200px;
+	height: 150px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
 	}
-	
-
-	
+		
 	#middle {
 	width: 750px;
 	height: 250px;
@@ -127,7 +213,7 @@
 	
 	#middle_left {
 	width: 375px;
-	height: 300px;
+	height:270px;
 	margin-left: auto;
 	margin-right: auto;
 	float: left;
@@ -135,16 +221,9 @@
 	
 	#middle_right {
 	width: 375px;
-	height: 300px;
+	height: 270px;
 	margin-left: auto;
 	margin-right: auto;
 	float: right;
 	}
 	
-	#bottom {
-	width: 750px;
-	height: 100px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	}

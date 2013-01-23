@@ -6,6 +6,7 @@ from search import Search
 app = Flask(__name__)
 
 @app.route('/', methods=['POST', 'GET'])
+@app.route('/index', methods=['POST', 'GET'])
 def index():
 	def address_return(address_lst):
 		address = ''
@@ -40,6 +41,9 @@ def index():
 				longitude = random_choice["location"]["coordinate"]["longitude"]
     			return render_template('page2.html', name=name, address=address, picture=picture, latitude=latitude, longitude=longitude)
 
+@app.route('/about', methods=['POST', 'GET'])
+def about():
+	return render_template('about.html')
     			
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.

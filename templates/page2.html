@@ -1,9 +1,5 @@
-<html>
-	<head>
-		<link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="../static/static.css" type="text/css" /> 
-		<title>Eat Here!</title> 
-    	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+{% extends "base.html" %}
+{% block content %}
     	<style type="text/css">
       		#map_canvas { 
       		width: 365px;
@@ -28,21 +24,18 @@
     <body onload="initialize()">	
 		<div id="page2_body">
 			<div id="top"> 
-				<h1> HOMIE, YOU WANNA TRY...<br><b>{{ name }}</b></h1>
-				<h2><b>{{ address }}</b></h2>
+				<h3> HOMIE, YOU WANNA TRY...<br><br>{{ name }}</h3><br><br>
+				<h4><b>{{ address }}</b></h4>
 			</div>
 			<div id=middle>
 				<div id="middle_left">
-					<br>
 		    		<div id="map_canvas"></div>
 				</div>
 				<div id="middle_right">
-					<h2><img src= {{ picture }} alt="some_text" width="365px" height="250px"></h2>
+					<img src= {{ picture }} alt="some_text" width="365px" height="250px">
 				</div>
 			</div>
-			<div id=bottom>
-				<h3><a id="refresh" href="javascript:history.go(0)">START OVER?</a></h3>
-			</div>
+				<h5><a id="refresh" href="javascript:history.go(0)" class="transition">START OVER?</a> | <a id="refresh" href="javascript:location.reload(true)" class="transition">RECOMMEND AGAIN!</a>
 		</div>
 	</body>
-</html>
+{% endblock %}

@@ -1,27 +1,19 @@
-<!DOCTYPE html>
-<html>
-	<head>
-	  	<script type="text/javascript" src="../static/jquery-1.8.3.min.js"></script>
-		<link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="../static/static.css" type="text/css" /> 
-
-		<title>FOOD!</title>
-	</head>
-	<body>
-		<div id=fullbody>
+{% extends "base.html" %}
+{% block content %}
+		<div style="text-align:center">
 			<h1>Where Ya From?</h1>
-			<div id=body_bottom>
 				<form action="/" method="post" id="search">
-  					<input name="location" type="text" size="40" placeholder="Wuuuuttttt City?" />
+  					<input name="location" type="text" size="40" placeholder="Wuuuuttttt City?"/><br>
+				<div class="horizontal_spacer"></div>
+				<div class="horizontal_spacer"></div>
 					<h1>Whatchu Lookin' For?</h1>
-  					<input name="term" type="text" size="40" placeholder="WHAT TYPE?!" />
-  					<br><br><br><br>
-  					<input type="submit" class="button" value="LEGGO!"></a>
+  					<input name="term" type="text" size="40" placeholder="WHAT TYPE?!"/><br>
+				<div class="horizontal_spacer"></div>
+				<div class="horizontal_spacer"></div>
+  					<input type="submit" class="transition button" value="LEGGO!"></a>
   				</form>
   			{% if error %}
-  				<h1> {{error}} </h1>				
+  				<br><font color="red"><h1> {{error}} </h1></font>			
   			{% endif %}
-  			</div>
 		</div>
-	</body>
-</html>
+{% endblock %}
