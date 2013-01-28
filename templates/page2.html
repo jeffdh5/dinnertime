@@ -24,18 +24,20 @@
     <body onload="initialize()">	
 		<div id="page2_body">
 			<div id="top"> 
-				<h3> HOMIE, YOU WANNA TRY...<br><br>{{ name }}</h3><br><br>
+				<h3> HOMIE, YOU WANNA TRY...<br><br>{{ name }}</h3><br>
 				<h4><b>{{ address }}</b></h4>
 			</div>
 			<div id=middle>
 				<div id="middle_left">
-		    		<div id="map_canvas"></div>
+		    		<div id="map_canvas">
+		    		</div>
 				</div>
 				<div id="middle_right">
 					<img src= {{ picture }} alt="some_text" width="365px" height="250px">
 				</div>
 			</div>
-				<h5><a id="refresh" href="javascript:history.go(0)" class="transition">START OVER?</a> | <a id="refresh" href="javascript:location.reload(true)" class="transition">RECOMMEND AGAIN!</a>
+				<h5><a id="refresh" href="javascript:history.go(0)" class="transition">START OVER?</a></h5>
+			</div>
 		</div>
 	</body>
 {% endblock %}
